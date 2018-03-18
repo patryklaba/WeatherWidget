@@ -1,0 +1,53 @@
+.footer-wrapper {
+    width: 350px;
+    height: 110px;
+    background: #E4E8ED;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-view-time {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-details-panel {
+    height: 110px;
+    display: flex;
+}
+
+.footer-details-panel .day-view:first-child {
+    background: rgb(218, 221, 226);
+}
+
+.footer-date {
+    color: rgb(153, 149, 149);
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.day-view {
+    height: 100%;
+    flex-basis: 70px;
+
+    display: flex;
+    flex-direction: column;
+    color: rgb(153, 149, 149);
+    
+}
+
+.day-view-date {
+    height: 20px;
+    font-size: 14px;
+    text-align: center;    
+}
+
+.day-view-weather {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
