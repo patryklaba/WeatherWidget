@@ -34,8 +34,7 @@
 
     display: flex;
     flex-direction: column;
-    color: rgb(153, 149, 149);
-    
+    color: rgb(104, 102, 102);
 }
 
 .day-view-date {

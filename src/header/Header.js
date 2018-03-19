@@ -14,6 +14,7 @@ class Header extends Component{
         this.handleDoubleClick = this.handleDoubleClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleBlur = this.handleBlur.bind(this);
+        this.handleTouchOutside = this.handleTouchOutside.bind(this);
     }
 
     handleDoubleClick() {
@@ -36,6 +37,17 @@ class Header extends Component{
         });
         this.props.updateWeatherData();
     }
+
+    handleTouchOutside(e) {
+        if (this.state.edit) {
+            if (e.target.className !== 'city-edit') {
+                this.handleBlur();
+            }
+        } else {
+            return;
+        }
+    }
+
     render() {
         let temperature = 0;
         let description = '';
@@ -47,7 +59,7 @@ class Header extends Component{
             icon = weather[0].id;
         }
         return (
-        <div className="header-wrapper" style={this.props.style}>
+        <div className="header-wrapper" style={this.props.style} onTouchEnd={this.handleTouchOutside}>
             <Icon id={icon}/>
             <p className="temperature">{Math.floor(temperature)}&deg;</p>
             {!this.state.edit ? 

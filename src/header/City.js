@@ -6,6 +6,7 @@ const City = ({cityName, onDouble }) => {
         <p 
             className="city"
             onDoubleClick={onDouble}
+            onTouchEnd={onDouble}
         >
             {cityName}
         </p>
